@@ -1,0 +1,24 @@
+Test-Command: /usr/share/cargo/bin/cargo-auto-test fixedbitset 0.4.2 --all-targets --all-features
+Features: test-name=rust-fixedbitset:@
+Depends: dh-cargo (>= 18), librust-serde-json-1+default-dev, @
+Restrictions: allow-stderr, skip-not-installable
+
+Test-Command: /usr/share/cargo/bin/cargo-auto-test fixedbitset 0.4.2 --all-targets 
+Features: test-name=librust-fixedbitset-dev:default
+Depends: dh-cargo (>= 18), librust-serde-json-1+default-dev, @
+Restrictions: allow-stderr, skip-not-installable
+
+Test-Command: /usr/share/cargo/bin/cargo-auto-test fixedbitset 0.4.2 --all-targets --no-default-features --features serde
+Features: test-name=librust-fixedbitset-dev:serde
+Depends: dh-cargo (>= 18), librust-serde-json-1+default-dev, @
+Restrictions: allow-stderr, skip-not-installable
+
+Test-Command: /usr/share/cargo/bin/cargo-auto-test fixedbitset 0.4.2 --all-targets --no-default-features --features std
+Features: test-name=librust-fixedbitset-dev:std
+Depends: dh-cargo (>= 18), librust-serde-json-1+default-dev, @
+Restrictions: allow-stderr, skip-not-installable
+
+Test-Command: /usr/share/cargo/bin/cargo-auto-test fixedbitset 0.4.2 --all-targets --no-default-features
+Features: test-name=librust-fixedbitset-dev:
+Depends: dh-cargo (>= 18), librust-serde-json-1+default-dev, @
+Restrictions: allow-stderr, skip-not-installable
